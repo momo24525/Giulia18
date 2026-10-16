@@ -1,0 +1,71 @@
+.pw-text {
+    text-align: center;
+    font-size: 151px;
+    color: #F8D7DA;
+    margin-top: 3rem;
+    font-family: cursive;
+}
+
+
+.emoji {
+    display: inline-block;
+    font-size: 50px;
+    vertical-align: middle;
+    margin-right: -288px;
+    position: relative;
+    right: 357px;
+    transform: rotate(348deg);
+    font-size: 11rem;
+}
+
+
+.form-pw label {
+    color: #F8D7DA;
+    font-family: cursive;
+    font-size: 24px;
+    text-align: center;
+}
+
+.form-pw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 40px auto 0;
+    width: 75%;
+}
+
+.form-pw label {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    color: #F8D7DA;
+    font-family: cursive;
+    font-size: clamp(27px, 16.5vw, 64px);
+}
+
+.form-pw input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 20px;
+    background-color: #fff8f5;
+    color: #800020;
+    border: 2px solid #F8D7DA;
+    border-radius: 16px;
+    font-size: 50px;
+    text-align: left;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-pw input:focus {
+    border-color: #FFD166;
+    box-shadow: 0 0 18px rgba(255, 209, 102, 0.35);
+}
+
+
+.form-pw input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 18px rgba(255, 209, 102, 0.35);
+}

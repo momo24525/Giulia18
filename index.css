@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    background: #7b1b38e0;
+    color: #F8D7DA;
+}
+
+.container {
+    position: sticky;
+    top: 0;
+    height: 105vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 24px;
+}
+
+h1 {
+    font-size: clamp(24px, 6vw, 34px);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 133px;
+}
+
+.envelope-wrapper {
+    width: min(300px, 82vw);
+    position: relative;
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+}
+
+.scroll-space {
+    height: 180vh;
+}
+
+
+/* Busta */
+.envelope {
+    background: #e99ab4;
+    border-radius: 4px;
+    box-shadow: 0 12px 30px rgba(130, 55, 85, 0.18);
+    perspective: 800px;
+}
+
+
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: #e99ab4;
+    border-radius: 4px;
+}
+
+/* Foglio dentro la busta */
+.letter {
+    position: absolute;
+    left: 7%;
+    top: 8%;
+    width: 86%;
+    height: 200%;
+    padding: 18px 14px;
+    background: #fffdf8;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(100, 50, 70, 0.12);
+    overflow: hidden;
+    transform: translateY(0);
+    font-family: "Caveat", cursive;
+    font-size: 18px;
+}
+
+
+/* Schermi con altezza ridotta */
+@media (max-height: 700px) {
+    .letter {
+        height: 180%;
+        font-size: 17px;
+    }
+}
+
+/* Schermi molto bassi */
+@media (max-height: 550px) {
+    .letter {
+        height: 150%;
+        font-size: 14px;
+    }
+}
+
+
+
+
+.letter-mask {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    overflow: visible;
+    clip-path: polygon(-30% -600%, 130% -600%, 130% 100%, -30% 100%);
+    pointer-events: none;
+}
+
+
+/* Davanti della busta: forma a triangolo */
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    background: #f3b1c6;
+    clip-path: polygon(0 0,
+            50% 60%,
+            100% 0,
+            100% 100%,
+            0 100%);
+    border-radius: 4px;
+}
+
+/* Linguetta */
+.envelope-flap {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    background: #d980a0;
+    clip-path: polygon(0 0, 100% 0, 50% 68%);
+    transform-origin: 50% 0%;
+    transform: rotateX(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+}
+
+.heart {
+    position: absolute;
+    z-index: 6;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    color: #00d5ff;
+    font-size: 45px;
+    text-shadow: 0 2px 4px rgba(120, 40, 70, 0.15);
+    pointer-events: none;
+}
